@@ -16,17 +16,14 @@ namespace robobit {
      * @param brightness percent of maximum brightness, eg: 50
 	 */
     //% blockId="robobit_setLED" block="light %LED_number %path|at %brightness|%"
-    //% brightness.min=0 brightness.max=100
+    //% Red.min=0 Red.max=16
+    //% Green.min=0 Green.max=16
+    //% Blue.min=0 Blue.max=16
     //% weight=80
-    export function setLEDColor(LED: Led, brightness: number): void {
-        let pwr = 0
-        brightness = Math.abs(brightness)
-        if (brightness > 100) {
-            brightness = 100
-        }
-
-         pins.spiWrite(0x20)
-		 pins.spiWrite(brightness)
+    export function setLEDColor(LED: Led, Red: number, Green: number, Blue: number): void {
+    
+        pins.spiWrite(LED + Red)
+        pins.spiWrite(Green*16+Blue)
     }
 
 }
