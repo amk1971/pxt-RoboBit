@@ -28,6 +28,7 @@ namespace robobit {
     }
 	/**
 	 * Initialize the SPI 
+     * @param R Speed, eg: 62500
      */
     //% blockId="robobit_init" block="Init SPI Speed to %Speed"
     //Speed.defl = 62500
