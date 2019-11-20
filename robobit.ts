@@ -13,17 +13,18 @@ namespace robobit {
 	/**
 	 * Sets the color and brightness of LED.
      * @param LED #
-     * @param brightness percent of maximum brightness, eg: 50
+     * @param Red Value, eg: 8
+     * @param Green Value, eg: 8
+     * @param Blue Value, eg: 8
 	 */
-    //% blockId="robobit_setLED" block="light %LED_number %path|at %brightness|%"
     //% Red.min=0 Red.max=16
     //% Green.min=0 Green.max=16
     //% Blue.min=0 Blue.max=16
     //% weight=80
     export function setLEDColor(LED: Led, Red: number, Green: number, Blue: number): void {
-    
+
         pins.spiWrite(LED + Red)
-        pins.spiWrite(Green*16+Blue)
+        pins.spiWrite(Green * 16 + Blue)
     }
 
 }
