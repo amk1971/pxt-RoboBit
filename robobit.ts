@@ -17,10 +17,6 @@ namespace robobit {
      * @param Green Value, eg: 8
      * @param Blue Value, eg: 8
 	 */
-    //% Red.min=0 Red.max=16
-    //% Green.min=0 Green.max=16
-    //% Blue.min=0 Blue.max=16
-    //% weight=80
     export function setLEDColor(LED: Led, Red: number, Green: number, Blue: number): void {
 
         pins.spiWrite(LED + Red)
