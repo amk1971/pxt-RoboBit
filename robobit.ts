@@ -6,7 +6,7 @@ enum Led {
 }
 
 /**
- * Functions to operate the roboo:bit
+ * Functions to operate the robo:bit
  */
 //% color=#104242 icon="\uf1b9" block="robo:bit"
 namespace robobit {
