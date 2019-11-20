@@ -29,6 +29,7 @@ namespace robobit {
 	/**
 	 * Initialize the SPI 
      */
+    //% blockId="robobit_init" block="Init SPI Speed to %Speed"
     //Speed.defl = 62500
     export function Init(Speed: number): void {
         pins.spiFrequency(Speed)
