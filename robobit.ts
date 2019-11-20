@@ -11,10 +11,10 @@ enum Led {
 //% color=#104242 icon="\uf1b9" block="robo:bit"
 namespace robobit {
 
-    export function setLEDColor(LED: Led, Red: number, Green: number, Blue: number): void {
+    export function setLEDColor(LED: Led, Red: number): void {
 
         pins.spiWrite(LED + Red)
-        pins.spiWrite(Green * 16 + Blue)
+        pins.spiWrite(10)
     }
 
 }
