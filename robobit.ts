@@ -23,8 +23,15 @@ namespace robobit {
     //% B.min=0 B.max=15
     //% weight=80
     export function setLEDColor(LED: Led, R: number, G: number, B: number): void {
-        pins.spiWrite(LED+R)
-		 pins.spiWrite(G*16+B)
+        pins.spiWrite(LED + R)
+        pins.spiWrite(G * 16 + B)
     }
-
+	/**
+	 * Initialize the SPI 
+     */
+    //% blockId="robobit_Init" block="Init SPI to %Speed"
+    //Speed.defl = 62500
+    export function Init(Speed: number): void {
+        pins.spiFrequency(Speed)
+    }
 }
