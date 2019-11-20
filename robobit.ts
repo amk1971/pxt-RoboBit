@@ -17,7 +17,7 @@ namespace robobit {
      * @param G brightness, eg: 8
      * @param B brightness, eg: 8
 	 */
-    //% blockId="robobit_setLED" block="LED %LED, Color is as %R %G %B"
+    //% blockId="robobit_setLED" block="LED|%LED|Color|is|as|%R|%G|%B"
     //% R.min=0 R.max=15
     //% G.min=0 G.max=15
     //% B.min=0 B.max=15
