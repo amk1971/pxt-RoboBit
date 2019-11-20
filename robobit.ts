@@ -6,27 +6,25 @@ enum Led {
 }
 
 /**
- * Functions to operate the roboo:bit
+ * Functions to operate the robo:bit
  */
 //% color=#104242 icon="\uf1b9" block="robo:bit"
 namespace robobit {
 	/**
 	 * Sets the color and brightness of LED.
      * @param LED #
-     * @param brightness percent of maximum brightness, eg: 50
+     * @param R brightness, eg: 8
+     * @param G brightness, eg: 8
+     * @param B brightness, eg: 8
 	 */
-    //% blockId="robobit_setLED" block="light %LED_number %path|at %brightness|%"
-    //% brightness.min=0 brightness.max=100
+    //% blockId="robobit_setLED" block="LED %LED_number Color is as %R %G %B"
+    //% R.min=0 R.max=15
+    //% G.min=0 G.max=15
+    //% B.min=0 B.max=15
     //% weight=80
-    export function setLEDColor(LED: Led, brightness: number): void {
-        let pwr = 0
-        brightness = Math.abs(brightness)
-        if (brightness > 100) {
-            brightness = 100
-        }
-
-         pins.spiWrite(0x20)
-		 pins.spiWrite(brightness)
+    export function setLEDColor(LED: Led, R: number, G: number, B: number): void {
+        pins.spiWrite(LED+R)
+		 pins.spiWrite(G*16+B)
     }
 
 }
