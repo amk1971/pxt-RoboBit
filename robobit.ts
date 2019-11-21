@@ -6,10 +6,14 @@ enum Led {
 }
 
 enum Motor {
-    //% block="left"
-    Left = 16,
-    //% block="right"
-    Right = 17
+    //% block="left front"
+    Leftf = 16,
+    //% block="right front"
+    Rightf = 17,
+    //% block="left rear"
+    Leftr = 18,
+    //% block="right rear"
+    Rightr = 19
 }
 enum Dir {
     //% block="forward"
@@ -32,10 +36,10 @@ namespace robobit {
     //% Speed.min=0 Speed.max=100
     //% weight=100
     export function setMotorSpeed(MOTOR: Motor, Direction: Dir, Speed: number): void {
-        if(Speed>100) Speed = 100
-        
+        if (Speed > 100) Speed = 100
+
         pins.spiWrite(MOTOR)
-        pins.spiWrite(Speed+Direction)
+        pins.spiWrite(Speed + Direction)
     }
     /**
 	 * Sets the color and brightness of LED.
@@ -53,7 +57,7 @@ namespace robobit {
         if (R > 16) R = 16
         if (G > 16) G = 16
         if (B > 16) B = 16
-        
+
         pins.spiWrite(LED + R)
         pins.spiWrite(G * 16 + B)
     }
