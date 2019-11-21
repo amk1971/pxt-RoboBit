@@ -18,7 +18,7 @@ enum Motor {
 namespace robobit {
 	/**
 	 * Sets the Speed of Motor.
-     * @param Motor #
+     * @param MOTOR #
      * @param Speed Speed of Motor, eg: 50
 	 */
     //% blockId="robobit_setMotorSpeed" block="MOTOR %Motor Speed %S"
