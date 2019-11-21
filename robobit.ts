@@ -11,6 +11,12 @@ enum Motor {
     //% block="right"
     Right = 17
 }
+enum Dir {
+    //% block="forward"
+    Forward = 0,
+    //% block="reverse"
+    Reverse = 128
+}
 /**
  * Functions to operate the robo:bit
  */
@@ -19,16 +25,17 @@ namespace robobit {
 	/**
 	 * Sets the Speed of Motor.
      * @param MOTOR #
+     * @param Dir Disretion of Motor
      * @param Speed Speed of Motor, eg: 50
 	 */
-    //% blockId="robobit_setMotorSpeed" block="MOTOR %Motor Speed %Speed"
+    //% blockId="robobit_setMotorSpeed" block="MOTOR %Motor Direction %Dir Speed %Speed"
     //% Speed.min=0 Speed.max=100
     //% weight=100
-    export function setMotorSpeed(MOTOR: Motor, Speed: number): void {
+    export function setMotorSpeed(MOTOR: Motor, Direction: Dir, Speed: number): void {
         if(Speed>100) Speed = 100
         
         pins.spiWrite(MOTOR)
-        pins.spiWrite(Speed)
+        pins.spiWrite(Speed+Direction)
     }
     /**
 	 * Sets the color and brightness of LED.
