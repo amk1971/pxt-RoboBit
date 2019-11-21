@@ -17,7 +17,7 @@ enum Motor {
 //% color=#104242 icon="\uf1b9" block="robo:bit"
 namespace robobit {
 	/**
-	 * Sets the Speed of LED.
+	 * Sets the Speed of Motor.
      * @param Motor #
      * @param Speed Speed of Motor, eg: 50
 	 */
