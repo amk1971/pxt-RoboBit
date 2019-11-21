@@ -22,9 +22,11 @@ namespace robobit {
      * @param Speed Speed of Motor, eg: 50
 	 */
     //% blockId="robobit_setMotorSpeed" block="MOTOR %Motor Speed %Speed"
-    //% MOTOR.min=0 MOTOR.max=100
+    //% Speed.min=0 Speed.max=100
     //% weight=100
     export function setMotorSpeed(MOTOR: Motor, Speed: number): void {
+        if(Speed>100) Speed = 100
+        
         pins.spiWrite(MOTOR)
         pins.spiWrite(Speed)
     }
@@ -41,6 +43,10 @@ namespace robobit {
     //% B.min=0 B.max=15
     //% weight=80
     export function setLEDColor(LED: Led, R: number, G: number, B: number): void {
+        if (R > 16) R = 16
+        if (G > 16) G = 16
+        if (B > 16) B = 16
+        
         pins.spiWrite(LED + R)
         pins.spiWrite(G * 16 + B)
     }
