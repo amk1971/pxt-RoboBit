@@ -22,7 +22,7 @@ namespace robobit {
      * @param Speed Speed of Motor, eg: 50
 	 */
     //% blockId="robobit_setMotorSpeed" block="MOTOR %Motor Speed %S"
-    //% R.min=0 R.max=100
+    //% MOTOR.min=0 MOTOR.max=100
     //% weight=80
     export function setMotorSpeed(MOTOR: Motor, Speed: number): void {
         pins.spiWrite(MOTOR)
