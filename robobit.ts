@@ -21,7 +21,7 @@ namespace robobit {
      * @param MOTOR #
      * @param Speed Speed of Motor, eg: 50
 	 */
-    //% blockId="robobit_setMotorSpeed" block="MOTOR %Motor Speed %S"
+    //% blockId="robobit_setMotorSpeed" block="MOTOR %Motor Speed %Speed"
     //% MOTOR.min=0 MOTOR.max=100
     //% weight=100
     export function setMotorSpeed(MOTOR: Motor, Speed: number): void {
