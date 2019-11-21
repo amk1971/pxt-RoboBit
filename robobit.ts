@@ -7,9 +7,9 @@ enum Led {
 
 enum Motor {
     //% block="left"
-    Left = 17,
+    Left = 16,
     //% block="right"
-    Right = 18
+    Right = 17
 }
 /**
  * Functions to operate the robo:bit
