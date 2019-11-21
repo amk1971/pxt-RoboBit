@@ -1,22 +1,22 @@
 enum Led {
     //% block="left"
-    Left = 32,
+    Left = 0x20,
     //% block="right"
-    Right = 64
+    Right = 0x40
 }
 
 enum Motor {
     //% block="left"
-    Leftf = 16,
+    Leftf = 0x10,
     //% block="right"
-    Rightf = 17,
+    Rightf = 0x11,
  
 }
 enum Dir {
     //% block="forward"
-    Forward = 0,
+    Forward = 0x00,
     //% block="reverse"
-    Reverse = 128
+    Reverse = 0x80
 }
 /**
  * Functions to operate the robo:bit
