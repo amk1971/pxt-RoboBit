@@ -6,14 +6,11 @@ enum Led {
 }
 
 enum Motor {
-    //% block="left front"
+    //% block="left"
     Leftf = 16,
-    //% block="right front"
+    //% block="right"
     Rightf = 17,
-    //% block="left rear"
-    Leftr = 18,
-    //% block="right rear"
-    Rightr = 19
+ 
 }
 enum Dir {
     //% block="forward"
